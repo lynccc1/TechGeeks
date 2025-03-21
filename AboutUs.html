@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGeeks - About Us</title>
+
+    <style>
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+
+}
+
+main{
+    padding-top: 60px;
+}
+
+/* Style the header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #FBFBFB;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect beneath the header */
+
+}
+
+/* Style the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem; /* Space between each navigation item */
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Style each link */
+nav ul li a {
+    color: #000; /* Color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+/* Change link color on hover */
+nav ul li a:hover {
+    color: #5EF2CE; 
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000; /* Color of the logo text */
+    margin-left: 1px; /* Add space between the logo and text */
+}
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.headerCont{
+    display: flex;
+
+    background: linear-gradient(179deg, rgba(72, 207, 237, 0.70) 0%, rgba(99, 249, 200, 0.70) 100%);
+    width: 30%;
+    height: 90px;
+
+    border-bottom-right-radius: 100px;
+
+    position: absolute;
+    z-index: 100;
+}
+
+.headingText{
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    width: 80%;
+
+    position: relative;
+}
+
+.headingText h1{
+    font-size: 30px; 
+    font-weight: 700; 
+    letter-spacing: 5px;
+    word-wrap: break-word;
+
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    position: absolute;
+    left: 40px;
+}
+
+.paragraphsCont-1{
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+
+}
+
+.subCont-p1{
+    width: 1300px; 
+    height: 400px; 
+
+    background-color: #fff; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 150px;
+}
+
+.heading-p1{
+    position: absolute;
+    top: 30px;
+    
+    font-size: 20px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.parag1-p1{
+    
+    width: 35%;
+    height: 70%;
+
+    position: relative;
+}
+
+.parag2-p1{
+    
+    width: 40%;
+    height: 70%;
+   
+    position: relative;
+}
+
+.parag1-p1 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 40px;
+}
+
+.parag2-p1 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 40px;
+}
+.mission_offer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.paragraphsCont-2{
+    display: grid;
+
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+.subCont-p2{
+    width: 600px; 
+    height: 400px; 
+
+    background-color: #fff; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 10px;
+}
+.parag1-p2{
+    
+    width: 80%;
+    height: 50%;
+
+    position: relative;
+}
+.parag1-p2 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 40px;
+}
+.mission{
+    position: absolute;
+    top: 30px;
+    
+    font-size: 20px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.paragraphsCont-3{
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+.subCont3-p3{
+    width: 600px; 
+    height: 400px; 
+
+    background-color: #fff; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 10px;
+}
+.offer{
+    position: absolute;
+    top: 30px;
+    
+    font-size: 20px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.parag1-p3{
+    
+    width: 80%;
+    height: 50%;
+
+    position: relative;
+}
+.parag1-p3 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 40px;
+}
+footer{
+    background-color: #f4f4f4;
+    padding-top: 5px;
+
+}
+.footerContainer{
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+}
+
+h3{
+    font-size: 18px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+.list{
+    padding: 0px;
+}
+.list li{
+    width: auto;
+    /*text-align: center;*/
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #50DDE1;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.socialIcons {
+    text-align: center;
+    padding: 0px;
+}
+.socialIcons li{
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+}
+.socialIcons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #50DDE1;
+}
+.socialIcons i:hover{
+    color: #50DDE1;
+}
+.bottomBar{
+    background: #ddd;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+.bottomBar p{
+    color: #343434;
+    margin: 0;
+    font-size: 10px;
+    padding: 7px;
+}
+    </style>
+
+</head>
+<body>
+    <main>
+        <header> 
+                <span><h4>TechGeeks</h4></span>    
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section class="headerCont">
+                <div class="headingText">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="paragraphsCont-1">
+            <div class="subCont-p1">
+                <span class="heading-p1"><h1>Nice to meet you!</h1></span>
+
+                <div class="parag1-p1"><p>Welcome to TechGeeks, your ultimate destination for 
+                    discovering top tech speakers who are shaping the 
+                    future of innovation. Our platform is designed to connect event organizers, 
+                    conference planners, and businesses with industry-leading professionals 
+                    who excel in a wide range of tech fields.</p></div>
+
+                <div class="parag2-p1"><p>At TechGeeks, we are passionate about showcasing the brightest minds in technology—from AI 
+                    and machine learning experts to cybersecurity specialists and software architects. We curate a 
+                    diverse lineup of speakers who are not only experts in their fields but also engaging presenters 
+                    capable of turning complex ideas into inspiring, accessible talks.</p></div>
+            </div>
+        </section>
+            <div class="mission_offer">
+            <section class="paragraphsCont-2">
+                <div class="subCont-p2">
+                    <span class="mission"><h1>Our Mission</h1></span>
+    
+                    <div class="parag1-p2"><p>To bridge the gap between visionary tech experts and the events that seek to inspire 
+                                            change. Whether you're planning a global conference or a small corporate workshop, 
+                                            we provide the resources you need to find the perfect speaker for your audience.</p></div>
+                    </div>
+                </section>
+    
+            <section class="paragraphsCont-3">
+                <div class="subCont3-p3">
+                    <span class="offer"><h1>What We Offer</h1></span>
+    
+                    <div class="parag1-p3"><p>TechGeeks is a comprehensive hub for event organizers looking for thought leaders 
+                                            and innovators in the tech world. Our platform makes it easy to browse and discover 
+                                            industry-leading speakers who bring fresh insights, real-world experience, and 
+                                            cutting-edge knowledge to the stage.</p></div>
+                </div>
+            </section>
+            </div>
+            <footer>
+                    </div> 
+                    <div class="footerContent">
+                        <h3>Quick Links</h3>
+                        <ul class="list">
+                            <li><a href="/Home Page/Homepage.html">Home</a></li>
+                            <li><a href="/AboutUs/AboutUs.html">AboutUs</a></li>
+                            <li><a href="/ContactUs/ContactUs1.html">ContactUs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottomBar">
+                    <p>&copy; 2024 TechGeeks . All rights reserved</p>
+                </div>
+            </footer>
+
+    </main>
+</body>
+<script>
+    const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+</script>
+</html>

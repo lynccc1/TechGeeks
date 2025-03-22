@@ -21,6 +21,8 @@ body{
 /* To avoid collision of the header and main's content */
 main{
     padding-top: 60px;
+    z-index: 2;
+    display: flex;
 }
 
 
@@ -30,8 +32,6 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
-
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,20 +84,11 @@ nav ul li a:hover {
     margin-left: 1px; 
 }
 
-/* Hamburger menu icon, currently hidden when Screen size is > 768px*/
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-
 .Section-1{
     
         display: flex;
         align-items: center;
         justify-content: center;
-    
         width: 100%;
         height: 700px; 
         background: linear-gradient(180deg, rgba(99, 249, 198, 0.70) 0%, rgba(72, 207, 237, 0.70) 100%);
@@ -106,7 +97,6 @@ nav ul li a:hover {
 .Division1-s1{
     width: 50%;
     height: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,7 +104,6 @@ nav ul li a:hover {
 
 .IntroCont-s1{
     position: relative;
-
     height: 465px;
     width: 500px;
     padding: 0 20px;
@@ -123,7 +112,7 @@ nav ul li a:hover {
 }
 
 .PicIntro-S1 {
-    position: relative;
+    display: flex;
     width: 300px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     padding: 0 20px;
@@ -132,15 +121,11 @@ nav ul li a:hover {
 }
 
 .PicIntro-S1 img {
-    width: 350%; /* Adjust percentage as needed */
+    width: 310%; /* Adjust percentage as needed */
     height: auto; /* Maintain aspect ratio */
     margin-left: 100px;
     border-radius: 1%;
 }
-
-
-
-/* Setting the Blue-line design positon */
 
 .IntroCont-s1 h1 {
 
@@ -158,212 +143,6 @@ nav ul li a:hover {
     color: #2F2F2F;
     margin-bottom: 20px;
 }
-
-
-
-\\\.Section-2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 700px; 
-    background: linear-gradient(180deg, rgba(99, 249, 198, 0.70) 0%, rgba(72, 207, 237, 0.70) 100%);
-}
-
-/* Container 1 styles */
-.S2-cont1{
-    padding: 1px;
-    width: 1000px; 
-    height: 500px; 
-    background: linear-gradient(270deg, #E9E9E9 0%, white 76%); 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
-    border-radius: 45px;
-
-    display: flex;
-}   
-
-/* Sub-container 1 style */
-.subCont1-s2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    height: 100%;
-    width: 55%;
-}
-
-.paragraph-s2{
-    height: 40%;
-    width: 70%;
-
-    text-align: justify;
-    color: #2F2F2F;
-}
-
-.buttonCont-s2{
-    margin-top: 30px;
-}
-
-/* Button Style */
-.button-s2{
-    width: 160px; 
-    height: 50px; 
-    background: linear-gradient(90deg, #48CFED 0%, #5EF2CE 81%); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 40px;
-
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-/* Button effect when hovered */
-.button-s2:hover{
-    transform: scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    background: linear-gradient(90deg, rgba(84.57, 51, 255, 0.70) 0%, rgba(152.33, 1.85, 222.06, 0.70) 81%);
-  }
-
-  /* Sub-container 2 style */
-.subCont2-s2{
-    display: flex;
-    position: relative;
-    height: 100%;
-    width: 45%;
-}
-
-.subCont2-s2 h1{
-    font-size: 42px;
-    font-weight: bold;
-    color: #2F2F2F;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    position: absolute;
-    top: 400px;
-    left: 65px;
-}
-
-.subCont2-s2 img{
-    position: absolute;
-    top: 50px;
-    right: 90px;
-}
-
-
-/* Section 3 - Styles */
-
-.Section-3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 700px; 
-    background: linear-gradient(270deg, #EEEEEE 0%, #F8F8F8 100%);
-}
-
-/* Conatainer 1 styles */
-.S3-cont1{
-    width: 1000px; 
-    height: 500px; 
-    background: white; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
-    border-radius: 40px;
-    
-    display: flex;
-}
-
-/* Sub-container 1 style */
-.subCont1-s3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 100%;
-    width: 50%;
-}
-
-/* About Us Oveview - Logo Size*/
-.subCont1-s3 img{
-    width: 350px;
-    height: 350px;
-}
-
-/* Sub-container 2 style */
-.subCont2-s3{
-    height: 100%;
-    width: 50%;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    right: 40px;
-}
-
-.subCont2-s3 h1{
-    font-size: 42px;
-    font-weight: bold;
-    color: #2F2F2F;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    position: absolute;
-    top: 50px;
-}
-
-.paragraph-s3{
-    height: 210px;
-    width: 380px;
-
-    text-align: justify;
-    color: #2F2F2F;
-
-    position: absolute;
-    top: 135px;
-}
-
-/* Button container style */
-.buttonCont-s3{
-    position: absolute;
-    top: 385px;
-}
-
-/* Button/Link style */
-.button-s3{
-    width: 160px; 
-    height: 50px; 
-    background: linear-gradient(90deg, #48CFED 0%, #5EF2CE 81%); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    border-radius: 40px;
-
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-}
-
-/* Button transition effect when hovered */
-.button-s3:hover{
-    transform: scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    background: linear-gradient(90deg, rgba(84.57, 51, 255, 0.70) 0%, rgba(152.33, 1.85, 222.06, 0.70) 81%);
-  }
 
 
 /* Footer Styles */
@@ -433,21 +212,6 @@ h3{
     width: 70px;
 }
 
-.socialIcons {
-    text-align: center;
-    padding: 0px;
-}
-
-.socialIcons li{
-    display: inline-block;
-    text-align: center;
-    padding: 3px;
-}
-
-.socialIcons i{
-    color: white;
-    font-size: 25px;
-}
 
 .list li a{
     color: #2F2F2F;
@@ -473,12 +237,9 @@ h3{
 }
 
 
-
-
-/* Responsive navigation/header style */
 @media (max-width: 768px) {
     nav {
-        display: none; /* Hides the nav when screen width > 768px */
+        display: none; 
         position: absolute;
         top: 60px;
         right: 0;
@@ -504,11 +265,6 @@ h3{
         text-align: center;
     }
 
-    /* Show the hamburger icon */
-    .hamburger {
-        display: block; 
-    }
-
     /* Footer Responsiveness */
     .footerContainer{
         flex-direction: column;
@@ -519,21 +275,11 @@ h3{
 
 @media (max-width: 500px) {
 
-    /* SECTION 1 - Adjusting the sizes and unsetting/hiding other properties */
-
     .Section-1{    
         max-width: 400px;
         max-height: 400px;
     }
 
-    .Division1-s1{
-        width: unset;
-        height: unset;
-    
-        display: unset;
-        justify-content: unset;
-        align-items: unset;
-    }
 
     .IntroCont-s1{
         top: 0;
@@ -546,232 +292,19 @@ h3{
     .IntroCont-s1 h1{
         margin-top: 20px;
         padding: 40px 30px 20px;
-        font-size: 40px;
-        line-height: 1.4;
+        font-size: 2rem;
         color: #2f2f2f;
     }
 
-    .Design-Line{
-        left: 85px;
-        top: 145px;
-        width: 63%;
-        height: auto;
-    }
-
     .IntroCont-s1 p{
-        width: 96%;
-        margin-bottom: 10px;
-        padding: 0px 30px;
-        font-size: 16px;
-
-        position: relative;
-        bottom: 30px;
+        padding: 0px 10px;
+        font-size: 1rem;
     }
 
-    .social-icons {
-        width: 100%;
-        padding: 0 30px;
-        display: flex;
-        gap: 15px; 
-    
-        position: relative;
-        bottom: 30px;
+    .PicIntro-S1 img {
+        width: 250%; /* Adjust percentage as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 100px;
+        border-radius: 1%;
     }
-    
-    .social-icons span {
-        font-size: 16px;
-        font-weight: 500;
-        color: #828282;
-        margin-right: 5px; 
-    }
-    
-    .social-icons img {
-        width: 20px; 
-        height: auto;
-    }
-
-    .Division2-s1{
-        display: none;
-    }
-
-
-    /* SECTION 2 - Adjusting the sizes and unsetting/hiding properties */
-
-    .Section-2{
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        margin-bottom: 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
-    }
-
-    /* Reversing position of the container's contents*/
-    .S2-cont1{
-        display: flex;
-        flex-direction: column-reverse;
-
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-
-        box-shadow: none;
-    }
-
-    .subCont1-s2{
-        width: 100%;
-        height: 325px;
-    }
-
-    /* Adjusting sizes and setting the text format */
-    .paragraph-s2{
-        width: 100%;
-        height: auto;
-
-        line-height: normal;
-        margin-bottom: 30px;
-        padding: 0 30px;
-
-        position: relative;
-        bottom: 20px;
-    }
-
-    .subCont2-s2{
-        height: 325px;
-        width: 100%;
-
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Adjusting the image size */
-    .subCont2-s2 img{
-        padding: 20px;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: auto;
-        position: unset;
-        margin-top: 15px;
-    }
-
-    /* Changing style for the heading */
-    .subCont2-s2 h1{
-        text-align: left;
-        font-size: 16px;
-        left: 0;
-        top: 0;
-        display: flex;
-        align-items: center;
-        padding-left: 20px;
-
-        width: 45%;
-        height: 35px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        background: linear-gradient(90deg, rgba(84.57, 51, 255, 0.70) 0%, rgba(152.33, 1.85, 222.06, 0.70) 81%);
-        text-shadow: none;
-    }
-
-    .buttonCont-s2{
-        position: relative;
-        bottom: 20px;
-        margin: 0;
-        
-     }
-     
-     /* Changing color for the button */
-     .button-s2{
-         width: 150px; 
-         height: 40px; 
-         background: linear-gradient(90deg, rgba(84.57, 51, 255, 0.70) 0%, rgba(152.33, 1.85, 222.06, 0.70) 81%);
-    }
-
-    /* Chaning the button's color when hovered */
-    .button-s2:hover{
-        background: linear-gradient(90deg, #48CFED 0%, #5EF2CE 81%);
-    }
-    
-    /* SECTOION 3 - Adjusting the sizes and unsetting/hiding properties */
-
-    .Section-3{
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        margin-bottom: 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); 
-    }
-
-    /* Changing the content's alignment vertically */
-    .S3-cont1{
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    /* Changing the background color for the image container */
-    .subCont1-s3{
-        height: 280px;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(99, 249, 198, 0.70) 0%, rgba(72, 207, 237, 0.70) 100%);
-    }
-
-    /* Styling the logo's image */
-    .subCont1-s3 img{
-        padding: 10px;
-        height: auto;
-        width: 60%;
-        border-radius: 30px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-        background: linear-gradient(270deg, #E9E9E9 0%, white 76%); 
-    }
-
-    /* Style for the paragraph container */
-    .subCont2-s3{
-        height: 400px; 
-        width: 100%; 
-        right: 0;
-    }
-
-    /* Adjusting sizes and setting the text format */
-    .paragraph-s3{
-        width: 100%;
-        height: auto;
-        font-size: 15px;
-        top: 0px;
-        position: static;
-
-        line-height: normal;
-        padding: 0 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .subCont2-s3 h1{
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        top: 0;
-
-        width: 100%;
-        height: 35px;
-        color: #2F2F2F;
-        background: linear-gradient(270deg, #E9E9E9 0%, white 76%); 
-        text-shadow: none;
-    }
-
-    /* Adjusting button's position and size */
-    .buttonCont-s3{
-        position: static;
-        top: 0;
-    }
-
-    .button-s3{
-        width: 150px; 
-        height: 40px; 
-   }
 }
-

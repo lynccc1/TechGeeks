@@ -66,13 +66,6 @@ nav ul li a:hover {
     margin-left: 5px;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 /* Main Content */
 .container {
     flex: 1; /* Pushes footer down */

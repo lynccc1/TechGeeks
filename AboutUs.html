@@ -23,11 +23,15 @@ body{
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full-page height */
 
 }
 
 main{
     padding-top: 60px;
+    overflow: hidden;
 }
 
 /* Style the header */
@@ -69,22 +73,29 @@ nav ul li a:hover {
     color: #5EF2CE; 
 }
 
-.logo span {
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 55px;
+    height: auto;
+}
+
+.logo h4 {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #000; /* Color of the logo text */
-    margin-left: 1px; /* Add space between the logo and text */
+    color: #000;
+    margin-left: 5px;
 }
 
 .headerCont{
     display: flex;
-
     background: linear-gradient(179deg, rgba(72, 207, 237, 0.70) 0%, rgba(99, 249, 200, 0.70) 100%);
     width: 30%;
     height: 90px;
-
     border-bottom-right-radius: 100px;
-
     position: absolute;
     z-index: 100;
 }
@@ -113,8 +124,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     position: relative;
-
-
 }
 
 .subCont-p1{
@@ -256,9 +265,7 @@ footer{
 
 }
 .footerContainer{
-    width: 100%;
-    margin: auto;
-    display: flex;
+    flex-direction: column;
 
 }
 
@@ -317,13 +324,453 @@ a:hover{
     font-size: 10px;
     padding: 7px;
 }
+
+@media (max-width: 1024px){
+
+    .parag1-p1{
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .heading-p1{
+        font-size: 30px;
+    }
+
+    .mission_offer{
+        display: block;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .subCont-p2 {
+        width: 100%;
+    }
+
+    .mission{
+        font-size: 30px;
+    }
+
+    .parag1-p2 {
+        font-size: 20px;
+    }
+    
+    .subCont3-p3{
+        width: 100%;
+        top: -150px;
+    }
+
+    .offer{
+        font-size: 30px;
+    }
+    .parag1-p3{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footerContainer {
+        flex-direction: column;
+    }
+
+    .logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo img {
+    width: 50px;
+    height: auto;
+}
+
+    .logo h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    margin-left: 5px;
+}
+
+    nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.headerCont{
+    display: flex;
+    background: linear-gradient(179deg, rgba(72, 207, 237, 0.70) 0%, rgba(99, 249, 200, 0.70) 100%);
+    width: 50%;
+    height: 80px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    z-index: 100;
+}
+
+.headingText{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    position: relative;
+}
+
+.headingText h1{
+    font-size: 25px; 
+    font-weight: 700; 
+    letter-spacing: 5px;
+    word-wrap: break-word;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 35px;
+}
+
+.paragraphsCont-1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.subCont-p1{
+    font-size: 20px;
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.heading-p1{
+    position: absolute;
+    top: 25px;
+    font-size: 25px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.parag1-p1{ 
+    padding-right: 10px;
+    padding-left: 10px;
+    position: absolute;
+    width: 80%;
+}
+
+.parag1-p1 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+}
+
+.mission_offer {
+    display: block;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+
+}
+.paragraphsCont-2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.parag1-p2 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: -10px;
+    font-size: 20px;
+}
+
+.mission{
+    position: absolute;
+    top: 20px;
+    font-size: 25px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.paragraphsCont-3{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 500px;
+}
+.subCont3-p3{
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+.offer{
+    position: absolute;
+    top: -220px;
+    font-size: 25px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.parag1-p3{
+    font-size: 20px;
+    position: relative;
+}
+.parag1-p3 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: -250px;
+    bottom: none;
+    font-size: 20px;
+    z-index: -10px;
+}
+
+}
+
+@media (max-width: 480px){
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        font-size: 12px;
+        gap: 0.9rem;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: auto;
+        margin-left: -15px;
+    }
+    
+        .logo h4 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #000;
+        margin-left: 5px;
+    }
+
+    .headerCont{
+    display: flex;
+    background: linear-gradient(179deg, rgba(72, 207, 237, 0.70) 0%, rgba(99, 249, 200, 0.70) 100%);
+    width: 60%;
+    height: 70px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    z-index: 100;
+}
+
+.headingText{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.headingText h1{
+    font-size: 20px; 
+    font-weight: 700; 
+    letter-spacing: 5px;
+    word-wrap: break-word;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 18px;
+}
+
+.paragraphsCont-1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    
+}
+
+.subCont-p1{
+    font-size: 20px;
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.heading-p1{
+    position: absolute;
+    top: 25px;
+    font-size: 20px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.parag1-p1{ 
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+    
+}
+
+.parag1-p1 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 15px;
+    font-size: 13px;
+}
+
+.mission_offer {
+    display: block;
+    justify-content: center;
+    position: relative;
+    height: 440px;
+
+}
+.paragraphsCont-2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.subCont-p2{
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+
+.parag1-p2{
+    position: relative;
+}
+.parag1-p2 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: -80px;
+    font-size: 13px;
+}
+
+.mission{
+    position: absolute;
+    top: -30px;
+    font-size: 20px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.paragraphsCont-3{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 500px;
+}
+.subCont3-p3{
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+.offer{
+    position: absolute;
+    top: -400px;
+    font-size: 20px; 
+    font-weight: 600; 
+    background: linear-gradient(90deg, #50DDE1 0%, #02F5BA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.parag1-p3{
+    font-size: 12px;
+    position: relative;
+}
+.parag1-p3 p{
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: -450px;
+    bottom: none;
+    font-size: 13px;
+    z-index: -10px;
+}
+
+.footerContent h3 {
+        font-size: 15px;
+    }
+    
+    .list {
+        font-size: 15px;
+    }
+    .list li{
+        width: auto;
+        /*text-align: center;*/
+        list-style-type: none;
+        padding: 2px;
+        margin: 0;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 1px;
+        background: #50DDE1;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 60px;
+    }
+
+}
     </style>
 
 </head>
 <body>
     <main>
         <header> 
-                <span><h4>TechGeeks</h4></span>    
+            <div class="logo">
+                <img src="Pictures/TechGeeks_Logo.png" alt="TechGeeks Logo">
+                <span><h4>TechGeeks</h4></span>
+            </div>
+                  
             <nav id="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -342,7 +789,7 @@ a:hover{
 
         <section class="paragraphsCont-1">
             <div class="subCont-p1">
-                <span class="heading-p1"><h1>Nice to meet you!</h1></span>
+                <h1 class="heading-p1">Nice to meet you!</h1>
 
                 <div class="parag1-p1"><p>Welcome to TechGeeks, your ultimate destination for 
                     discovering top tech speakers who are shaping the future of innovation. 
@@ -351,50 +798,54 @@ a:hover{
                     of tech fields. At TechGeeks, we are passionate about showcasing the brightest minds in technology—from AI 
                     and machine learning experts to cybersecurity specialists and software architects. We curate a 
                     diverse lineup of speakers who are not only experts in their fields but also engaging presenters 
-                    capable of turning complex ideas into inspiring, accessible talks.</p>
-                </div>
-
-                
+                    capable of turning complex ideas into inspiring, accessible talks.
+                </p>
+                </div>    
             </div>
-        </section>
-            <div class="mission_offer">
+     </section>
+
+        <div class="mission_offer">
             <section class="paragraphsCont-2">
                 <div class="subCont-p2">
-                    <span class="mission"><h1>Our Mission</h1></span>
+                    <h1 class="mission">Our Mission</h1>
     
-                    <div class="parag1-p2"><p>To bridge the gap between visionary tech experts and the events that seek to inspire 
-                                            change. Whether you're planning a global conference or a small corporate workshop, 
-                                            we provide the resources you need to find the perfect speaker for your audience.</p></div>
+                    <div class="parag1-p2">
+                        <p>To bridge the gap between visionary tech experts and the events that seek to inspire 
+                            change. Whether you're planning a global conference or a small corporate workshop, 
+                            we provide the resources you need to find the perfect speaker for your audience.
+                        </p>
                     </div>
-                </section>
+                </div>
+            </section>
     
             <section class="paragraphsCont-3">
                 <div class="subCont3-p3">
-                    <span class="offer"><h1>What We Offer</h1></span>
+                    <h1 class="offer">What We Offer</h1>
     
-                    <div class="parag1-p3"><p>TechGeeks is a comprehensive hub for event organizers looking for thought leaders 
-                                            and innovators in the tech world. Our platform makes it easy to browse and discover 
-                                            industry-leading speakers who bring fresh insights, real-world experience, and 
-                                            cutting-edge knowledge to the stage.</p></div>
+                    <div class="parag1-p3">
+                        <p>TechGeeks is a comprehensive hub for event organizers looking for thought leaders 
+                            and innovators in the tech world. Our platform makes it easy to browse and discover 
+                            industry-leading speakers who bring fresh insights, real-world experience, and 
+                            cutting-edge knowledge to the stage.
+                        </p>
+                    </div>
                 </div>
             </section>
-            </div>
+        </div>
             <footer>
-                    </div> 
                     <div class="footerContent">
                         <h3>Quick Links</h3>
                         <ul class="list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="AboutUs.html">AboutUs</a></li>
                             <li><a href="ContactUs1.html">ContactUs</a></li>
+                            <li><a href="AboutUs.html">AboutUs</a></li>
+                            
                         </ul>
                     </div>
-                </div>
                 <div class="bottomBar">
                     <p>&copy; 2024 TechGeeks . All rights reserved</p>
                 </div>
             </footer>
-
     </main>
 </body>
 </html>

@@ -1,37 +1,27 @@
-/* Reset the default of the browser */
-*{
+/* Reset default browser styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Setting the font size for the entire document */
-html{
-    font-size: 16px;
-}
-
-/* Setting the text format for the entire body */
-body{
-    
+/* Body styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
 }
 
-/* To avoid collision of the header and main's content */
-main{
-    padding-top: 60px;
-    z-index: 2;
-    display: flex;
-}
-
-
-/* Styles for the navigation/header */
+/* Header */
+/* Ensure header remains fixed and structured */
 header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1000; /* Ensures it stays above other elements */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,160 +32,139 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Styles for the unordered-list */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2.5rem; 
-    margin: 0;
-    padding: 0 20px;
-}
-
-/* Styles for navigation each link */
-nav ul li a {
-    color: #2F2F2F; 
-    text-decoration: none; 
-    font-weight: bold;
-    transition: color 0.2s ease; 
-}
-
-/* Change link color on hover */
-nav ul li a:hover {
-    color: #5EF2CE; 
-}
-
-/* Style for the logo's container */
+/* Logo container fix */
 .LogoCont {
     display: flex;
     align-items: center;
+    gap: 10px; /* Adds space between logo and text */
 }
 
-/* Style for the logo's image */
+/* Logo image */
 .LogoCont img {
-    width: 55px; 
-    height: auto; 
+    width: 50px; 
+    height: auto;
 }
 
-/* Style for the logo's text */
+/* Logo text (TechGeeks) */
 .LogoCont span {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2F2F2F; 
-    margin-left: 1px; 
+    color: #2F2F2F;
 }
 
-.Section-1{
-    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 700px; 
-        background: linear-gradient(180deg, rgba(99, 249, 198, 0.70) 0%, rgba(72, 207, 237, 0.70) 100%);
-}
 
-.Division1-s1{
-    width: 50%;
-    height: auto;
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
 }
 
-.IntroCont-s1{
-    position: relative;
-    height: 465px;
-    width: 500px;
-    padding: 0 20px;
-    margin-left: -680px;
+nav ul li a {
+    color: #2F2F2F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #5EF2CE;
+}
+
+/* Main section */
+main {
+    flex: 1;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Section-1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 50px 20px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(99, 249, 198, 0.70) 0%, rgba(72, 207, 237, 0.70) 100%);
+}
+
+.Division1-s1 {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.IntroCont-s1 {
+    max-width: 500px;
     text-align: left;
 }
 
-.PicIntro-S1 {
-    display: flex;
-    width: 300px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    padding: 0 20px;
-    margin-left: 1px;
-    text-align: right;
-}
-
 .PicIntro-S1 img {
-    width: 310%; /* Adjust percentage as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 100px;
-    border-radius: 1%;
-}
-
-.IntroCont-s1 h1 {
-
-    line-height: 1.4;
-    max-width: 400px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2F2F2F;
-    margin-bottom: 10px;
-}
-
-.IntroCont-s1 p {
-    width: 70%;
-    font-size: 1.1rem;
-    color: #2F2F2F;
-    margin-bottom: 20px;
-}
-
-
-/* Footer Styles */
-
-footer{
-    background-color: #f4f4f4;
-    padding-top: 5px;
-
-}
-
-.footerContainer{
     width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+    max-width: 600px;
+    border-radius: 5px;
 }
 
-.footerContent{
-    width:33.3%;
-}
-
-h3{
-    font-size: 18px;
-    margin-bottom: 3px;
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px 0;
     text-align: center;
 }
 
-.footerContent p{
-    font-size: 14px;
-    width: 190px;
-    margin: auto;
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footerContent {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.bottomBar{
+    background: #ddd;
+    text-align: center;
+    padding: 0 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.bottomBar p{
+    color: #343434;
+    margin: 0;
+    font-size: 10px;
     padding: 7px;
 }
 
-.footerContent ul{
-    padding: 0;
-    margin: 0;
+.list {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
     text-align: center;
 }
-
-.list{
-    padding: 0px;
-}
-
 .list li{
     width: auto;
-    text-align: center;
+    /*text-align: center;*/
     list-style-type: none;
     padding: 5px;
     margin: 0;
     position: relative;
 }
-
 .list li::before{
     content: '';
     position: absolute;
@@ -207,104 +176,132 @@ h3{
     background: #50DDE1;
     transition-duration: .5s;
 }
-
 .list li:hover::before{
     width: 70px;
 }
 
-
-.list li a{
-    color: #2F2F2F;
+a{
     text-decoration: none;
 }
-
-.list a:hover{
+a:hover{
     color: #50DDE1;
 }
 
-.bottomBar{
-    background: #ddd;
-    text-align: center;
-    padding: 5px 0;
-    margin-top: 20px;
-}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .Section-1 {
+        flex-direction: column;
+        text-align: center;
+        min-height: 100vh;
+    }
 
-.bottomBar p{
-    color: #343434;
-    margin: 0;
-    font-size: 10px;
-    padding: 7px;
+    .IntroCont-s1, .PicIntro-S1 img {
+        width: 90%;
+    }
+
+    .IntroCont-s1 h1{
+        font-size: 25px;
+    }
+
+    .IntroCont-s1 p{
+        font-size: 20px;
+    }
+
+    header {
+        padding: 0 15px;
+    }
+    
+    .LogoCont img {
+        width: 45px; /* Slightly reduce logo size */
+    }
+    
+    .LogoCont span {
+        font-size: 1rem;
+    }
+
 }
 
 
 @media (max-width: 768px) {
-    nav {
-        display: none; 
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #FBFBFB;
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    .Section-1{
+        min-height: 100vh;
     }
 
-    /* Show the nav when active */
-    nav.active {
-        display: block; 
-    }
-
-    /* Stack items vertically */
     nav ul {
-        flex-direction: column; 
-        gap: 1.5rem;
-        padding: 20px;
+        font-size: 14px;
+        gap: 1rem;
+    }
+    
+    .IntroCont-s1 h1{
+        font-size: 25px;
     }
 
-    /* Align text to center */
-    nav ul li{
-        text-align: center;
+    .IntroCont-s1 p{
+        font-size: 20px;
     }
 
-    /* Footer Responsiveness */
-    .footerContainer{
-        flex-direction: column;
-        align-items: center;
+    .PicIntro-S1 img {
+        max-width: 400px;
+    }
+
+    .LogoCont {
+        gap: 5px;
+    }
+
+    .LogoCont img {
+        width: 40px;
+    }
+
+    .LogoCont span {
+        font-size: 0.9rem;
     }
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
 
-    .Section-1{    
-        max-width: 400px;
-        max-height: 400px;
+    .IntroCont-s1 h1 {
+        font-size: 1.7rem;
     }
 
-
-    .IntroCont-s1{
-        top: 0;
-        height: 400px;
-        width: 100%;
-        padding: 0;
-        margin-left: 0;
+    nav ul {
+        list-style: none;
+        display: flex;
+        font-size: 12px;
+        gap: 10px;
+        margin: 0;
+        padding: 0 15px;
     }
 
-    .IntroCont-s1 h1{
+    .LogoCont img {
+        width: 40px;
+        height: auto;
+        margin-left: -15px;
+    }
+    
+        .LogoCont h4 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #000;
+        margin-left: 5px;
+    }
+
+    .footerContent h3 {
+        font-size: 15px;
+    }
+
+    .bottomBar{
+        background: #ddd;
+        text-align: center;
+        padding: 5px 0;
         margin-top: 20px;
-        padding: 40px 30px 20px;
-        font-size: 2rem;
-        color: #2f2f2f;
+    
     }
-
-    .IntroCont-s1 p{
-        padding: 0px 10px;
-        font-size: 1rem;
-    }
-
-    .PicIntro-S1 img {
-        width: 250%; /* Adjust percentage as needed */
-        height: auto; /* Maintain aspect ratio */
-        margin-left: 100px;
-        border-radius: 1%;
+    .bottomBar p{
+        color: #343434;
+        margin: 0;
+        font-size: 10px;
+        padding: 7px;
     }
 }

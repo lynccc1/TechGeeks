@@ -35,6 +35,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2.5rem;
+    margin: 0;
+    padding: 0 20px;
 }
 
 nav ul li a {
@@ -98,7 +100,7 @@ nav ul li a:hover {
 
 .forms h2 {
     color: #39effc;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -219,61 +221,283 @@ h3 {
     margin: 0;
 }
 
-.list li {
-    padding: 5px;
+.list {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
     text-align: center;
+}
+.list li{
+    width: auto;
+    /*text-align: center;*/
     list-style-type: none;
+    padding: 5px;
+    margin: 0;
     position: relative;
 }
-
-.list li a {
-    text-decoration: none;
-    color: #2F2F2F;
-    transition: color 0.3s;
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #50DDE1;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
 }
 
-.list li a:hover {
+a{
+    text-decoration: none;
+}
+a:hover{
     color: #50DDE1;
 }
 
-/* Bottom Footer Bar */
-.bottomBar {
+.bottomBar{
     background: #ddd;
-    padding: 10px 0;
-    font-size: 12px;
-    color: #343434;
     text-align: center;
-    margin-top: 10px;
+    padding: 0 0;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
+
+.bottomBar p{
+    color: #343434;
+    margin: 0;
+    font-size: 10px;
+    padding: 7px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #FBFBFB;
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        padding: 20px;
-    }
-
-    .hamburger {
-        display: block;
-    }
 
     .footerContainer {
         flex-direction: column;
     }
+
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .image img {
+        width: 350px;
+        height: auto;
+        padding-top: 10px;
+        border-radius: 20px;
+    }
+
+    .footerContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+    .footerContent {
+        width: 33.3%;
+        text-align: center;
+    }
+
+    .forms h2 {
+        color: #39effc;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .forms p {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+    
+        .logo h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000;
+        margin-left: 5px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0 20px;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .image img {
+        width: 275px;
+        height: auto;
+        padding-top: 10px;
+        border-radius: 20px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        font-size: 12px;
+        gap: 10px;
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: auto;
+        margin-left: -15px;
+    }
+    
+        .logo h4 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #000;
+        margin-left: 5px;
+    }
+
+    .contactContainer {
+        max-width: 120%;
+        border-radius: 40px;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .contactInfo {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 10px; /* Ensures it stays below the image */
+        margin-left: 10px;
+        width: 100%;
+    }
+    
+    .contactInfo img {
+        width: 20px;
+        height: auto;
+        padding-top: -10px;
+        margin-left: -25px;
+
+    }
+    
+    .phoneNumbers{
+        display:block;
+        margin-top: -20px ;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+    
+    .email img {
+        width: 20px;
+        height: auto;
+        padding-top: -10px;
+        margin-left: -30px;
+    }
+    
+    .email{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 10px; /* Ensures it stays below the image */
+        margin-left: 10px;
+        width: 100%;
+    }
+    
+    .em{
+        display:block;
+        margin-top: -30px ;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+    
+    .address img{
+        width: 20px;
+        height: auto;
+        padding-top: -10px;
+        margin-left: -10px;
+    }
+    
+    .address{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 10px; /* Ensures it stays below the image */
+        margin-left: 10px;
+        width: 100%;
+    }
+    
+    .add{
+        display:flex;
+        margin-top: -25px ;
+        margin-left: 40px;
+        font-size: 13px;
+        justify-content: center;
+    }
+
+    .footerContent h3 {
+        font-size: 15px;
+    }
+    
+    .list {
+        font-size: 15px;
+    }
+    .list li{
+        width: auto;
+        /*text-align: center;*/
+        list-style-type: none;
+        padding: 2px;
+        margin: 0;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 1px;
+        background: #50DDE1;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 60px;
+    }
+
+    .bottomBar{
+        background: #ddd;
+        text-align: center;
+        padding: 5px 0;
+        margin-top: 20px;
+    
+    }
+    .bottomBar p{
+        color: #343434;
+        margin: 0;
+        font-size: 10px;
+        padding: 7px;
+    }
+
 }
